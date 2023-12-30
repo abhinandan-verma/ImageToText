@@ -1,11 +1,5 @@
 package com.example.imagetotext;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -20,6 +14,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -82,6 +83,7 @@ public class ScanActivity extends AppCompatActivity {
                 PERMISSION_CODE);
     }
 
+    @SuppressLint("QueryPermissionsNeeded")
     private void CaptureImage() {
 
         Intent takePicture = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
